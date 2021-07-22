@@ -3,6 +3,7 @@
 {% block content %}
     <h2 style="color: #FFB703;">Project page</h2>
     <hr>
+    <img src="{{ project.featured_image.url }}" alt="image">
     <h3 style="color: #EE4266;">{{project.title}}</h3>
     <p style="color: #3BCEAC;">{{ project.description }}</p>
 {% endblock content %}

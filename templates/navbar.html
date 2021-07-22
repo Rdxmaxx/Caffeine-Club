@@ -1,5 +1,6 @@
-<nav>
-    <h2>NAVBAR</h2>
-    <a href="{% url 'create-project' %}">Add Project</a>
-    <hr>
+{% load static %}
+
+<nav class="nav-bar">
+    <span class="logo"><img src="{% static 'images/logo.svg' %}" width="60px" height="60px" alt="logo" />CAFFEINE CLUB</span>
+    <span class="nav-item"><a href="{% url 'create-project' %}">Add Project</a></span>
 </nav>
