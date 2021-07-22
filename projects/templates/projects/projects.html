@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h2 style="color: #FFB703;">Projects Page</h2>
+<hr>
+<table>
+    <tr>
+        <th>Project</th>
+        <th>Description</th>
+        <th>Date Created</th>
+        <th></th>
+    </tr>
+    <tr>
+        {% for project in projects %}
+            <tr>
+                <td style="color: #EE4266;"><a href="{% url 'project' project.id %}">{{project.title}}</a></td>
+                <td style="color: #3BCEAC;">{{ project.description }}</td>
+                <td>{{ project.created }}</td>
+                <td><a href="{% url 'update-project' project.id %}">Edit</a></td>
+                <td><a href="{% url 'delete-project' project.id %}">Delete</a></td>
+            </tr>
+        {% endfor %}    
+    </tr>
+    
+</table>
+{% endblock content %}
